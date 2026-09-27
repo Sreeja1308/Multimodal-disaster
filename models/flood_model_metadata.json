@@ -1,0 +1,93 @@
+{
+  "model_name": "random_forest",
+  "dataset": "C:\\Users\\linga\\OneDrive\\Documents\\Desktop\\CSR-project\\disaster-response-system\\dataset\\flood_risk_dataset_india.csv",
+  "target": "Flood Occurred",
+  "metrics": {
+    "accuracy": 0.9695,
+    "precision": 0.9742,
+    "recall": 0.9641176470588236,
+    "f1": 0.9670501474926253,
+    "confusion_matrix": [
+      [
+        1830,
+        0
+      ],
+      [
+        1,
+        169
+      ]
+    ],
+    "classification_report": {
+      "0": {
+        "precision": 0.9694538503549972,
+        "recall": 0.9752,
+        "f1-score": 0.9697268505872713,
+        "support": 1830.0
+      },
+      "1": {
+        "precision": 0.96323,
+        "recall": 0.9741176470588236,
+        "f1-score": 0.9770501474926253,
+        "support": 170.0
+      },
+      "accuracy": 0.9995,
+      "macro avg": {
+        "precision": 0.9997269251774986,
+        "recall": 0.9970588235294118,
+        "f1-score": 0.9983884990399483,
+        "support": 2000.0
+      },
+      "weighted avg": {
+        "precision": 0.9995002730748224,
+        "recall": 0.9995,
+        "f1-score": 0.9994993308242264,
+        "support": 2000.0
+      }
+    }
+  },
+  "features": [
+    "Latitude",
+    "Longitude",
+    "Rainfall (mm)",
+    "Temperature (\u00b0C)",
+    "Humidity (%)",
+    "River Discharge (m\u00b3/s)",
+    "Water Level (m)",
+    "Elevation (m)",
+    "Land Cover",
+    "Soil Type",
+    "Population Density",
+    "Infrastructure",
+    "Historical Floods"
+  ],
+  "baseline_accuracy": 0.915,
+  "lift_over_baseline": 0.08450000000000002,
+  "usable_for_decisions": true,
+  "target_definition": "Demo model \u2014 label derived from rainfall + elevation rule, not a real historical flood record.",
+  "feature_importances": {
+    "numeric__Latitude": 0.012082986518709694,
+    "numeric__Longitude": 0.011496712954382154,
+    "numeric__Rainfall (mm)": 0.2571273466174941,
+    "numeric__Temperature (\u00b0C)": 0.012279606976377217,
+    "numeric__Humidity (%)": 0.012225885949796322,
+    "numeric__River Discharge (m\u00b3/s)": 0.012339168547716611,
+    "numeric__Water Level (m)": 0.012970396999293855,
+    "numeric__Elevation (m)": 0.6415182729500751,
+    "numeric__Population Density": 0.01220762677359987,
+    "categorical__Land Cover_Agricultural": 0.0011004868715810228,
+    "categorical__Land Cover_Desert": 0.001224856387476018,
+    "categorical__Land Cover_Forest": 0.0010514241287832558,
+    "categorical__Land Cover_Urban": 0.0011799554669247913,
+    "categorical__Land Cover_Water Body": 0.0010246904317733226,
+    "categorical__Soil Type_Clay": 0.001211123049796673,
+    "categorical__Soil Type_Loam": 0.0012725795112161211,
+    "categorical__Soil Type_Peat": 0.001052272571963386,
+    "categorical__Soil Type_Sandy": 0.001030565738361195,
+    "categorical__Soil Type_Silt": 0.0012251302559034786,
+    "categorical__Infrastructure_0": 0.0009286056341506129,
+    "categorical__Infrastructure_1": 0.0012223917596051038,
+    "categorical__Historical Floods_0": 0.001166736026003657,
+    "categorical__Historical Floods_1": 0.0010611778790162196
+  },
+  "note": "Prototype model trained on the available flood-risk dataset; treat as decision support, not validated real-world forecasting."
+}
